@@ -1,55 +1,96 @@
-import React from 'react'
-import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiFillX } from 'react-icons/ai'
-import { FaSquareXTwitter } from 'react-icons/fa6'
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div  className="bg-black text-white max-w-[2000px]  sm:h-[500px] p-12 flex justify-between mx-auto hover:cursor-pointer">
-        <ul>
-            <li className='font-medium '>Customer Care</li>
-            <li><a>Help Center</a></li>
-            <li><a>How to Buy</a></li>
-            <li><a>Corporate & Bulk Purchasing</a></li>
-            <li><a>Returns & Refunds</a></li>
-            <li><a>Shop</a></li>
-            <li><a>Contact Us</a></li>
-            <li><a>Purchase Protection</a></li>
-            <li><a>Pick up Points</a></li>
-        </ul>
+    <footer className="bg-[#3A3845] text-white py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+        <div>
+          <h2 className="text-lg font-semibold mb-4">CeramiLine</h2>
+          <p className="text-gray-400">
+            Your one-stop shop for all your needs. We bring the best quality
+            products to your doorstep.
+          </p>
+        </div>
 
-        <ul>
-            <li className='font-medium'>ADORNIA</li>
-            <li><a>About Us</a></li>
-            <li><a>Digital Payments</a></li>
-            <li><a>Donates</a></li>
-            <li><a>Blog</a></li>
-            <li><a>Term and Conditions</a></li>
-            <li><a>Privacy Policy</a></li>
-            <li><a>NTN Number:40123456-7</a></li>
-            <li><a>STRN Number:1700-123455678</a></li>
-            <li><a>Online Shopping App</a></li>
-            <li><a>Online Grocery Shopping</a></li>
-            <li><a>Adornia Exclusive</a></li>
-            <li><a>Adornia University</a></li>
-            <li><a>Sell on Adornia</a></li>
-            <li><a>Join Adornia Affiliate Program</a></li>
-        </ul>
-         
-         <div className='flex gap-1 text-[20px]'>
-          <p className='flex flex-gap-4' >Follow Us:</p>
-          <AiFillFacebook />
-          <AiFillInstagram />
-          <AiFillLinkedin />
-          <AiFillGithub />
-          <AiFillTwitterCircle />
-          <FaSquareXTwitter />
-         </div>
-    </div>
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="/about" className="hover:text-gray-300">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="hover:text-gray-300">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-gray-300">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="hover:text-gray-300">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
+          <ul className="space-y-2">
+            <li>Email: hurmatayub64@gmail.com</li>
+            <li>Phone: +1 234 567 890</li>
+            <li>Address: Pakistan, Karachi</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
+          <div className="w-[344px] h-[52px]">
+            <div className=" flex space-x-4">
+              <a href="#">
+                <Image
+                  src="/Facebook.png"
+                  alt="Facebook"
+                  width={10}
+                  height={18}
+                />
+              </a>
+              <a href="#" className="hover:text-gray-300">
+                <Image
+                  src="/Twitter.png"
+                  alt="Twitter"
+                  width={20}
+                  height={18}
+                />
+              </a>
+              <a href="#" className="hover:text-gray-300">
+                <Image
+                  src="/Instagram.png"
+                  alt="Instagram"
+                  width={20}
+                  height={18}
+                />
+              </a>
+              <a href="#" className="hover:text-gray-300">
+                <Image
+                  src="/Linkedin.png"
+                  alt="LinkedIn"
+                  width={20}
+                  height={18}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    
-  )
-}
+      <div className="text-center mt-10 text-gray-500">
+        &copy; 2024 CeramiLine. All rights reserved.
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
-
-
+export default Footer;
