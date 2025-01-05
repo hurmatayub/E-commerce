@@ -1,36 +1,26 @@
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
 
-interface propsType {
-    img: string;
-    title: string;
-    mainTitle: string;
-    price: string;
-}
-
-const Slide:React.FC<propsType> = ({img, title, mainTitle, price}) => {
-  return <div className='outline-none border-none relative'>
-    <div className='absolute left-[30px] md:left-[70px] max-w-[350px] sm:max-w-[350px] top-[50%] -translate-y-[50%] space-y-2 lg:space-y-4 bg-[#ffffffa2] sm:bg-transparent p-4 sm:p-0 rounded-none '>
+const Slide: React.FC = () => {
+  return (
+    <div className="relative">
+    <div className="absolute lg:left-[30px]  md:left-[200px] max-w-[350px] sm:max-w-[250px] lg:top-[60%] top-[130px] -translate-y-[50%] space-y-4 p-4 sm:p-0 rounded-none">
+      <button
+        className="lg:px-8 lg:py-3 px-3 py-3 sm:mt-6 md:px-12 md:py-5 bg-[#76422f] text-white text-lg sm:text-base md:text-2xl mt-7 rounded-[10px]"
+      >
+        Shop Now
+      </button>
     </div>
-        <h3 className='text-accent text-[24px] lg:text-[28px]'>{title}</h3>
-        <h2 className='text-blackish text-[26px] md:text-[30px] lg:text-[44px] font-bold leading-[1.2] '>
-            {mainTitle}
-        </h2>
-
-        <h3 className='text-[24px] text-gray-500'>
-            
-            <b className='text-[20px] md:text-[24px] lg:text-[30px]'>{price}</b>
-            
-        </h3>
-       
-    
-
-    <Image className='w-[100%] h-[300px] md:h-auto rounded-xl object-cover object-right md:object-left-bottom'
-      src={img}
+    <Image
+      className="w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-auto object-cover object-center mt-2"
+      src="/banner.png"
       alt="banner"
       width={2000}
-      height={2000} />
+      height={2000}
+    />
   </div>
+  
+  );
 };
 
-export default Slide
+export default Slide;
